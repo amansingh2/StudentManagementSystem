@@ -25,6 +25,7 @@ public class StudentService {
         for(String s : studentRequest.getSubjectOpted()){
             Subject subject = subjectRepository.findOneBySubjectName(s);
             if(subject == null){
+                subject = new Subject();
                 subject.setSubjectName(s);
                 subjectRepository.save(subject);
             }

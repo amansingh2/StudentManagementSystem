@@ -15,10 +15,5 @@ public class Result {
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
     private int resultID;
-    @OneToOne
-    @JoinColumn(name = "student_roll_number")
-    private Student student;
     private String status;
-
-
 }

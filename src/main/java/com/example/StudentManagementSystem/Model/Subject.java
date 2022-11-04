@@ -20,10 +20,10 @@ public class Subject {
     @GeneratedValue(strategy = GenerationType.AUTO)
     private int subjectID;
     @ManyToOne
-    @JoinColumn(name="rollNumber", nullable=false)
+    @JoinColumn(name="rollNumber")
     private Student student;
     @ManyToOne
-    @JoinColumn(name="facultyId", nullable=false)
+    @JoinColumn(name="facultyId")
     private Faculty faculty;
     private  String subjectName;
 }
